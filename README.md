@@ -1,2 +1,2 @@
 # didactic-adventure
-1st year Project
+1st year IT Project - IUT Aubière 
