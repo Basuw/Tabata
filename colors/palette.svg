@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+      <!-- https://coolors.co/88759c-dddbf1-8fbb76-526da3 -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 500 250" xml:space="preserve">
+        <rect fill="#88759c" x="0" y="0" width="125" height="220"/>
+	<rect fill="#dddbf1" x="125" y="0" width="125" height="220"/>
+	<rect fill="#8fbb76" x="250" y="0" width="125" height="220"/>
+	<rect fill="#526da3" x="375" y="0" width="125" height="220"/>
+      </svg>

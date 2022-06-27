@@ -1,0 +1,22 @@
+﻿<Window x:Class="Tabata.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tabata"
+        mc:Ignorable="d"
+        Title="Tabata" Height="1080" Width="1920" MinWidth="600"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <DockPanel>
+        <StackPanel Background="CornflowerBlue" Width="250px">
+            <Button Style="{StaticResource MenuButton}" Click="clickProfil" x:Name="profilButton">Profil</Button>
+            <Button Style="{StaticResource MenuButton}" Click="clickFavs">Favoris</Button>
+            <Button Style="{StaticResource MenuButton}" Click="clickProgs">Programmes</Button>
+            <Button Style="{StaticResource MenuButton}" Click="clickExos">Exercices</Button>
+            <Button Style="{StaticResource MenuButton}" Click="clickSante">Suivi de santé</Button>
+        </StackPanel>
+        <ContentControl x:Name="contentControl">
+            <Image Source="/img/tabata2.jpg" Stretch="Fill" />
+        </ContentControl>
+    </DockPanel>
+</Window>

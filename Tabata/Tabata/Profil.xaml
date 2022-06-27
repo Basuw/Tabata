@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="Tabata.Profil"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tabata"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ContentControl x:Name="contentControl">
+        <ScrollViewer>
+            <DockPanel Style="{StaticResource userCtrl}">
+                <Button  VerticalAlignment="Bottom" Margin="0,0,10,10" Width="75" Height="75" Click="clickModifProf" DockPanel.Dock="Right">
+                    <Image  Height="60" Source="icon/editpen.jpg" RenderTransformOrigin="0.5,0.5" Width="155" >
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Button>
+                <StackPanel Orientation="Vertical">
+                    <WrapPanel>
+                        <Image HorizontalAlignment="Left" Height="200" Source="icon/profilPic.png" Margin="0,20,0,0"></Image>
+                        <TextBlock  Style="{StaticResource title}" Margin="0,90,0,80">
+
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0} {1}">
+                                    <Binding Path="Firstname"/>
+                                    <Binding Path="Lastname"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock x:Name="Age"  Style="{StaticResource profilTextB}" Text="{Binding}" />
+                        <TextBlock Style="{StaticResource profilTextB}" Text="{Binding Weight, StringFormat={}Poids: {0}kg}" />
+                        <TextBlock Style="{StaticResource profilTextB}" Text="{Binding Height, StringFormat={}Taille: {0}cm}" />
+                        <TextBlock Style="{StaticResource profilTextB}" Text="{Binding Sexe, StringFormat={}Sexe: {0}}" />
+                    </WrapPanel>
+                    <TextBlock Style="{StaticResource title}"> Pratique Sportive :</TextBlock>
+                    <WrapPanel>
+                        <TextBlock Style="{StaticResource profilTextB}" Text="{Binding SportPractice, StringFormat={}Niveau : {0} }" />
+                        <TextBlock Style="{StaticResource profilTextB}" Text="{Binding SportFrequency, StringFormat={}{0} Entrainement/Semaine}" />
+                    </WrapPanel>
+                    <TextBlock Style="{StaticResource title}"> Objectifs :</TextBlock>
+                    <WrapPanel>
+                        <TextBlock Style="{StaticResource profilTextB}" Text="{Binding Goal}" />
+                        <TextBlock Style="{StaticResource profilTextB}" Text="{Binding WeightGoal, StringFormat={}{0}kg}" />
+                        <TextBlock Style="{StaticResource profilTextB}" Text="{Binding TrainingGoal, StringFormat={}{0} Entrainement/Semaine}" />
+
+                    </WrapPanel>
+                </StackPanel>
+
+            </DockPanel>
+        </ScrollViewer>
+    </ContentControl>
+</UserControl>

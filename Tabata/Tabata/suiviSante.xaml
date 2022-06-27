@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="Tabata.suiviSante"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tabata"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer>
+        <DockPanel Style="{StaticResource userCtrl}">
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="2*"></RowDefinition>
+                        <RowDefinition Height="2*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <WrapPanel Orientation="Vertical">
+                        <TextBlock HorizontalAlignment="Center" Style="{StaticResource title}"> Temps</TextBlock>
+                        <TextBlock Style="{StaticResource profilTextB}"> Temps d'entrainement total</TextBlock>
+                        <TextBlock Style="{StaticResource profilTextB}"> Temps d'entrainement ce mois-ci</TextBlock>
+                        <TextBlock Style="{StaticResource profilTextB}"> Temps d'entrainement cette semaine</TextBlock>
+                        <TextBlock Style="{StaticResource profilTextB}"> Fréquence d'entrainement par semaine</TextBlock>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Vertical" Grid.Row="1">
+                        <TextBlock HorizontalAlignment="Center" Style="{StaticResource title}"> Progression - Objectifs</TextBlock>
+                        <TextBlock Style="{StaticResource profilTextB}"> Objectif de poids </TextBlock>
+                        <ProgressBar Margin="20" Height="10" Minimum="0" Maximum="{Binding WeightGoal}" Value="{Binding Weight}"/>
+                        <TextBlock Style="{StaticResource profilTextB}"> Objetcif d'entrainements</TextBlock>
+                        <ProgressBar Margin="20" Height="10" Minimum="0" Maximum="{Binding TrainingGoal}" Value="{Binding SportFrequency}"/>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Vertical" Grid.Row="2">
+                        <TextBlock HorizontalAlignment="Center" Style="{StaticResource title}"> Ressources</TextBlock>
+                        <TextBlock FontSize="20" Margin="20">           
+                            <Hyperlink NavigateUri="https://flo.health/fr/votre-cycle/mode-de-vie/sommeil/14-habitudes-de-sommeil-saines" RequestNavigate="Hyperlink_RequestNavigate">
+                                Bonnes habitudes de sommeil
+                            </Hyperlink>
+                        </TextBlock>
+                        <TextBlock FontSize="20" Margin="20">           
+                            <Hyperlink NavigateUri="https://www.who.int/fr/news-room/fact-sheets/detail/healthy-diet" RequestNavigate="Hyperlink_RequestNavigate">
+                                Alimentation Saine
+                            </Hyperlink>
+                        </TextBlock>
+                        <TextBlock FontSize="20" Margin="20">           
+                            <Hyperlink NavigateUri="https://blog.karma-yoga-shop.com/bienfaits-de-la-meditation/" RequestNavigate="Hyperlink_RequestNavigate">
+                                Bienfaits de la Méditation
+                            </Hyperlink>
+                        </TextBlock>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Vertical" Grid.Column="1">
+                        <TextBlock HorizontalAlignment="Center" Style="{StaticResource title}"> Progression - Objectifs</TextBlock>
+                        <TextBlock x:Name="IMC" Style="{StaticResource profilTextB}" Text="{Binding}"/>
+                    </WrapPanel>
+                </Grid>
+            </StackPanel>
+        </DockPanel>
+    </ScrollViewer>
+</UserControl>

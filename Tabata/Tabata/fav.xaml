@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="Tabata.fav"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tabata"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ContentControl x:Name="contentControl">
+        <ScrollViewer>
+            <Grid Style="{StaticResource grid}" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <DockPanel Grid.Column="1" Grid.Row="0" >
+                    <ComboBox VerticalAlignment="Center" Width="150" Height="30" DockPanel.Dock="Right" Margin="10,0,20,0" SelectedIndex="0">
+                        <TextBlock>Muscle</TextBlock>
+                        <TextBlock>Quadricepts</TextBlock>
+                        <TextBlock>Biceps</TextBlock>
+                        <TextBlock>Pelvis</TextBlock>
+                        <TextBlock>Tout</TextBlock>
+                    </ComboBox>
+                    <ComboBox VerticalAlignment="Center" Width="150" Height="30" DockPanel.Dock="Right" Margin="10,0,10,0" SelectedIndex="0">
+                        <TextBlock>Partie du Corps</TextBlock>
+                        <TextBlock>Haut</TextBlock>
+                        <TextBlock>Millieu</TextBlock>
+                        <TextBlock>Bas</TextBlock>
+                        <TextBlock>Tout</TextBlock>
+                    </ComboBox>
+                    <ComboBox VerticalAlignment="Center" Width="150" Height="30" DockPanel.Dock="Right" Margin="10,0,10,0" SelectedIndex="0">
+                        <TextBlock>Durée</TextBlock>
+                        <TextBlock>0 - 15 min</TextBlock>
+                        <TextBlock>15 - 30 min</TextBlock>
+                        <TextBlock>+ 30 min</TextBlock>
+                        <TextBlock>Tout</TextBlock>
+                    </ComboBox>
+
+                    <Button Width="30" Height="30" DockPanel.Dock="Right" Margin="0,0,50,0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/icon/search.png" />
+                        </Button.Background>
+                    </Button>
+
+                    <TextBox VerticalAlignment="Center" Width="200" Height="30" DockPanel.Dock="Right" Padding="5,5,0,0">Search bar</TextBox>
+                </DockPanel>
+                <TextBlock  Style="{StaticResource title}">Vos entrainements favoris</TextBlock>
+
+                <ListBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="ListBoxProg" HorizontalContentAlignment="Center" SelectionChanged="ListBoxProg_SelectionChanged" Background="Wheat">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="2"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <local:sousPrgm Height="400" Width="800"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <TextBlock Style="{StaticResource title}" Grid.Row="2">Vos exercices favoris</TextBlock>
+
+                <ListBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" x:Name="ListBoxExo" HorizontalContentAlignment="Center" SelectionChanged="ListBoxExo_SelectionChanged" Background="Wheat">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="2"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <local:sousExos Height="400" Width="800"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+            </Grid>
+        </ScrollViewer>
+    </ContentControl>
+</UserControl>

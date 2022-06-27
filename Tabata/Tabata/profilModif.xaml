@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Tabata.profilModif"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tabata"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ContentControl x:Name="contentControl">
+        <ScrollViewer>
+            <DockPanel Style="{StaticResource userCtrl}">
+                <Button DockPanel.Dock="Right" VerticalAlignment="Bottom" Margin="0,0,10,10" Width="75" Height="75" Click="clickEnrProf" Background="LawnGreen">
+                    <Image  Height="50" Source="icon/saveIcon.png" Width="70" >
+                    </Image>
+                </Button>
+                <StackPanel Orientation="Vertical">
+                    <WrapPanel>
+                        <Image HorizontalAlignment="Left" Height="200" Source="icon/profilPic.png" Margin="0,20,0,0"></Image>
+                        <TextBlock Style="{StaticResource title}" Margin="0,90,0,80">
+                            <TextBox x:Name="chgFisrtname" Style="{StaticResource editBox}" Text="{Binding Firstname}"/>
+                            <TextBox x:Name="chgLastname" Style="{StaticResource editBox}" Text="{Binding Lastname}" />
+                        </TextBlock>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock TextAlignment="Center" Style="{StaticResource profilTextB}"> Age : <TextBox x:Name="chgBirthDate" Style="{StaticResource editBox}" Text="{Binding BirthDate}"/></TextBlock>
+                        <TextBlock Style="{StaticResource profilTextB}"> Poids : <TextBox x:Name="chgWeight" Style="{StaticResource editBox}" Text="{Binding Weight}"/></TextBlock>
+                        <TextBlock Style="{StaticResource profilTextB}"> Taille : <TextBox x:Name="chgHeight" Style="{StaticResource editBox}" Text="{Binding Height}"/></TextBlock>
+                        <TextBlock Style="{StaticResource profilTextB}"> Sexe : <TextBox x:Name="chgSexe" Style="{StaticResource editBox}" Text="{Binding Sexe}"/></TextBlock>
+                    </WrapPanel>
+                    <TextBlock Style="{StaticResource title}"> Pratique Sportive :</TextBlock>
+                    <WrapPanel>
+                        <TextBlock Style="{StaticResource profilTextB}"> Niveau de Pratique <TextBox x:Name="chgSportPractice" Style="{StaticResource editBox}" Text="{Binding SportPractice}"/></TextBlock>
+                        <TextBlock Style="{StaticResource profilTextB}"> fréquence des entrainements : <TextBox x:Name="chgSportFrequency" Style="{StaticResource editBox}" Text="{Binding SportFrequency}"/></TextBlock>
+                    </WrapPanel>
+                    <TextBlock Style="{StaticResource title}"> Objectifs :</TextBlock>
+                    <WrapPanel>
+                        <TextBlock Style="{StaticResource profilTextB}"> Objectif de poids : <TextBox x:Name="chgWeightGoal" Style="{StaticResource editBox}" Text="{Binding WeightGoal}"/></TextBlock>
+                        <TextBlock Style="{StaticResource profilTextB}"> Objectif Principal : <TextBox x:Name="chgGoal" Style="{StaticResource editBox}" Text="{Binding Goal}"/></TextBlock>
+                        <TextBlock Style="{StaticResource profilTextB}"> Objectif D'Entrainement : <TextBox x:Name="chgTrainingGoal" Style="{StaticResource editBox}" Text="{Binding TrainingGoal}"/></TextBlock>
+                    </WrapPanel>
+                </StackPanel>
+
+            </DockPanel>
+        </ScrollViewer>
+    </ContentControl>
+</UserControl>
