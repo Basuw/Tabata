@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,24 @@ namespace Tabata
 
             contentControl.Content = new Profil();
             Mgr.DataSave();
+        }
+
+        private void modifImage(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.InitialDirectory = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "profilePictures");
+            dlg.FileName = "profilImage";
+            dlg.DefaultExt = ".jpg | .png";
+            dlg.Filter = "All images files (.jpg, .png)|*.jpg;*.png|JPG files (.jpg)|*.jpg|PNG files (.png)|*.png";
+
+            bool? result = dlg.ShowDialog();
+
+            if (result == true) 
+            {
+                string filename = dlg.FileName;
+                imgProfile.Source = new BitmapImage(new Uri(filename, UriKind.Absolute));
+                Mgr.User.Image = filename;
+            }
         }
     }
 }

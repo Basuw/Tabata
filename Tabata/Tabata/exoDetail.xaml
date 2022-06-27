@@ -25,7 +25,7 @@
                 <ColumnDefinition Width="0.3*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
-            <Rectangle Fill="White" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="9"/>
+            <Rectangle Fill="LightGray" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="9"/>
             <Image Source="{Binding Image}" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="9"/>
             <Rectangle Fill="DimGray" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
             <Viewbox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10">
@@ -56,12 +56,12 @@
             <Viewbox Grid.Row="2" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Left">
                 <TextBlock>
                     <TextBlock.Text>
-                    <MultiBinding StringFormat="{} Type: {0}&#10; Zone de Travail: {1}&#10; Difficulté: {2}">
-                        <Binding Path="TypeList"/>
+                        <MultiBinding StringFormat="{} Type: {0}&#10; Zone de Travail: {1}&#10; Difficulté: {2}">
+                            <Binding Path="TypeList"/>
                             <Binding Path="PartiCrps"/>
                             <Binding Path="Difficulty"/>
-                    </MultiBinding>
-                </TextBlock.Text>
+                        </MultiBinding>
+                    </TextBlock.Text>
                 </TextBlock>
             </Viewbox>
             <ItemsControl Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" x:Name="muscleListBox" Background="Gray" Margin="15,0,0,0">
@@ -77,8 +77,8 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-            <Rectangle Fill="Yellow" Grid.Row="1" Grid.RowSpan="4" Grid.Column="3"/>
-            <Rectangle Fill="White" Grid.Row="2" Grid.RowSpan="2" Grid.Column="5" Stroke="Purple" StrokeThickness="5"/>
+            <Rectangle Fill="DimGray" Grid.RowSpan="6" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,9,0,9" Width="3"/>
+            <Rectangle Fill="LightGray" Grid.Row="2" Grid.RowSpan="2" Grid.Column="5" Stroke="DimGray" StrokeThickness="5"/>
             <Viewbox Grid.Row="2" Grid.RowSpan="2" Grid.Column="5">
                 <TextBlock Text="{Binding Description}"/>
             </Viewbox>

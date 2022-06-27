@@ -13,7 +13,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <Rectangle Height="auto" Width="auto" Grid.Row="0"  Fill="White"/>
+        <Rectangle Height="auto" Width="auto" Grid.Row="0"  Fill="LightGray"/>
         <Image Source="{Binding Image}" Grid.Row="0" />
         <Rectangle Height="auto" Width="auto" Grid.Row="1"  Fill="LightBlue" Stroke="Black" StrokeThickness="2"/>
 

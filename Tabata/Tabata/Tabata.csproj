@@ -10,6 +10,8 @@
   <ItemGroup>
     <None Remove="icon\emptyStar.png" />
     <None Remove="icon\haltere.ico" />
+    <None Remove="icon\pause-play.jpg" />
+    <None Remove="icon\pauseplay.jpg" />
     <None Remove="icon\star.png" />
     <None Remove="icon\heart.png" />
     <None Remove="icon\editpen.jpg" />
@@ -27,6 +29,12 @@
     <None Remove="img\tabata.jpg" />
     <None Remove="img\tabata2.jpg" />
     <None Remove="img\squat.png" />
+    <None Remove="profilePictures\IMG_0.png" />
+    <None Remove="profilePictures\IMG_1.png" />
+    <None Remove="profilePictures\IMG_2.png" />
+    <None Remove="profilePictures\IMG_3.png" />
+    <None Remove="profilePictures\IMG_4.png" />
+    <None Remove="profilePictures\IMG_5.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +45,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="icon\haltere.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icon\pauseplay.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="icon\star.png">
@@ -52,9 +63,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="icon\profil.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="icon\profilPic.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="icon\saveIcon.png">
@@ -79,6 +87,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="img\tabata2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="profilePictures\IMG_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="profilePictures\IMG_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="profilePictures\IMG_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="profilePictures\IMG_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="profilePictures\IMG_4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="profilePictures\IMG_5.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

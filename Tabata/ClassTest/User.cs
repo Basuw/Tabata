@@ -9,7 +9,7 @@ namespace ClassTest
     [DataContract]
     public class User
     {
-        public User(string firstname, string lastname, DateTime birthDate, double weight, double height, string sexe, int sportFrequency ,string sportPractice, string goal, int trainingGoal, double weightGoal, List<Exos> exoFav, List<Programs> progFav, Dictionary<DateTime, Programs> progHistory, int objHebdo, double cal=0)
+        public User(string image, string firstname, string lastname, DateTime birthDate, double weight, double height, string sexe, int sportFrequency ,string sportPractice, string goal, int trainingGoal, double weightGoal, List<Exos> exoFav, List<Programs> progFav, Dictionary<DateTime, Programs> progHistory, int objHebdo, double cal=0)
         {
 
             Firstname = firstname;
@@ -28,6 +28,7 @@ namespace ClassTest
             Cal = cal;
             ProgHistory = progHistory;
             ObjHebdo = objHebdo;
+            Image = image;
         }
         public User(User usr)
         {
@@ -47,7 +48,13 @@ namespace ClassTest
             this.Cal = usr.Cal;
             this.ProgHistory = usr.ProgHistory;
             this.ObjHebdo =usr.ObjHebdo;
+            this.Image = usr.Image;
         }
+        [DataMember(Order = 16)]
+        public string Image { get { return image; } set { image = value; } }
+        private string image;
+
+
         [DataMember (EmitDefaultValue =false, Order =15)]
         public double Cal { get; set; }
 

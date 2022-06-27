@@ -23,7 +23,7 @@
                 </Button>
                 <StackPanel Orientation="Vertical">
                     <WrapPanel>
-                        <Image HorizontalAlignment="Left" Height="200" Source="icon/profilPic.png" Margin="0,20,0,0"></Image>
+                        <Image HorizontalAlignment="Left" Height="200" Source="{Binding Image}" Margin="0,20,0,0"></Image>
                         <TextBlock  Style="{StaticResource title}" Margin="0,90,0,80">
 
                             <TextBlock.Text>

@@ -34,7 +34,7 @@ namespace Stub
             List<Programs> progFav = new List<Programs> { };
             DateTime dateTime = DateTime.Now;
             Dictionary<DateTime,Programs> dico=new Dictionary<DateTime, Programs>();
-            User usr = new("Bastien", "Jacquelin", new DateTime(2003, 04, 09), 60, 182, "Male", 3, "Modéré", "Prise de Masse", 5, 65, exoFav, progFav, dico,1,500) ;
+            User usr = new("icon/profilPic.png","Bastien", "Jacquelin", new DateTime(2003, 04, 09), 60, 182, "Male", 3, "Modéré", "Prise de Masse", 5, 65, exoFav, progFav, dico,1,500) ;
             return usr;
         }
         public List<Exos> ChargeExos(User usr)
