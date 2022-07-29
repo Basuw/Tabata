@@ -35,7 +35,7 @@
                         </TextBlock>
                     </WrapPanel>
                     <WrapPanel>
-                        <TextBlock x:Name="Age"  Style="{StaticResource profilTextB}" Text="{Binding}" />
+                        <TextBlock x:Name="Age"  Style="{StaticResource profilTextB}" Text="{Binding}"/>
                         <TextBlock Style="{StaticResource profilTextB}" Text="{Binding Weight, StringFormat={}Poids: {0}kg}" />
                         <TextBlock Style="{StaticResource profilTextB}" Text="{Binding Height, StringFormat={}Taille: {0}cm}" />
                         <TextBlock Style="{StaticResource profilTextB}" Text="{Binding Sexe, StringFormat={}Sexe: {0}}" />
