@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<User xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ClassTest">
+  <Firstname>Bastien</Firstname>
+  <Lastname>Jacquelin</Lastname>
+  <BirthDate>2009-09-04T00:00:00</BirthDate>
+  <Weight>60</Weight>
+  <Height>182</Height>
+  <Sexe>Male</Sexe>
+  <SportFrequency>3</SportFrequency>
+  <SportPractice>Modéré</SportPractice>
+  <Goal>Prise de Masse</Goal>
+  <TrainingGoal>5</TrainingGoal>
+  <WeightGoal>65</WeightGoal>
+  <ObjHebdo>1</ObjHebdo>
+  <ProgHistory xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <ExoFav />
+  <ProgFav />
+  <Cal>500</Cal>
+  <Image>C:\Users\basti\Documents\Projets\App sport\Appli-Sport\Tabata\Tabata\bin\Debug\net5.0-windows\profilePictures\IMG_4.png</Image>
+</User>
