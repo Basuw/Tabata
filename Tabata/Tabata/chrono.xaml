@@ -27,7 +27,7 @@
             </Border>
 
             <Viewbox Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3">
-                <TextBlock Text="Programme n°7" Foreground="White"/>
+                <TextBlock Text="{Binding Name}" Foreground="White"/>
             </Viewbox>
         </Grid>
 
@@ -49,15 +49,15 @@
                 <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Rectangle Fill="LimeGreen" Stroke="DimGray" StrokeThickness="2" Grid.Row="2" Grid.RowSpan="1" Grid.Column="1"/>
+            <Rectangle x:Name="rect" Stroke="DimGray" StrokeThickness="2" Grid.Row="2" Grid.RowSpan="1" Grid.Column="1"/>
             <Viewbox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock Text="Burpees" Foreground="OrangeRed"/>
+                <TextBlock x:Name="NameCurrent" Foreground="OrangeRed"/>
             </Viewbox>
             <Viewbox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <ListBox x:Name="chronoTimer" Background="LimeGreen" BorderThickness="0" Foreground="Black" Margin="0,1,0,1" ></ListBox>
+                <ListBox x:Name="chronoTimer" BorderThickness="0" Foreground="Black" Margin="0,1,0,1" ></ListBox>
             </Viewbox>
-            <Rectangle Stroke="DimGray" StrokeThickness="2" Grid.Row="4"  Grid.Column="1"/>
-            <Image Source="./img/squat.jpg" Grid.Row="4"  Grid.Column="1" Margin="0,2,0,2" />
+            <Rectangle Grid.Row="4"  Grid.Column="1"/>
+            <Image x:Name="Img" Grid.Row="4"  Grid.Column="1" Margin="0,2,0,2" />
 
 
             <Grid Grid.Row="1" Grid.Column="3" Grid.RowSpan="2">
@@ -85,13 +85,22 @@
                     <TextBlock Text="Exo suivant" Foreground="White" />
                 </Viewbox>
                 <Viewbox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
-                    <TextBlock Text="Nom" Foreground="White" />
+                    <TextBlock Text="Nom" Style="{StaticResource chronoTxt}" />
                 </Viewbox>
                 <Viewbox Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
-                    <TextBlock Text="Durée" Foreground="White" />
+                    <TextBlock Text="Durée" Style="{StaticResource chronoTxt}" />
                 </Viewbox>
                 <Viewbox Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
-                    <TextBlock Text="Difficulté" Foreground="White" />
+                    <TextBlock Text="Difficulté" Style="{StaticResource chronoTxt}" />
+                </Viewbox>
+                <Viewbox Grid.Row="2" Grid.Column="3" >
+                    <TextBlock x:Name="nameNextEx" Style="{StaticResource chronoTxt}"></TextBlock>
+                </Viewbox>
+                <Viewbox Grid.Row="3" Grid.Column="3">
+                    <TextBlock x:Name="dureeNextEx"  Style="{StaticResource chronoTxt}"></TextBlock>
+                </Viewbox>
+                <Viewbox Grid.Row="4" Grid.Column="3">
+                    <TextBlock x:Name="diffNextEx"  Style="{StaticResource chronoTxt}"></TextBlock>
                 </Viewbox>
             </Grid>
             <Grid Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
@@ -120,7 +129,7 @@
                 </Viewbox>
 
                 <Viewbox Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
-                    <TextBlock Text="5/7" Foreground="White" />
+                    <TextBlock x:Name="avancee" Style="{StaticResource chronoTxt}" />
                 </Viewbox>
                 <Viewbox Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
                     <TextBlock Text="qqch" Foreground="White" />

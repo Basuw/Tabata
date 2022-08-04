@@ -12,7 +12,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Fill="blue" Grid.Column="0" Grid.ColumnSpan="2" Stroke="Black" StrokeThickness="2"/>
+        <Rectangle Fill="DimGray" Grid.Column="0" Grid.ColumnSpan="2" Stroke="Black" StrokeThickness="2"/>
 
         <!-- <TextBlock Text="Squat &#10;Force &#10;8:00"/> -->
         <TextBlock FontSize="20" Grid.Column="1" VerticalAlignment="Center" Foreground="White">

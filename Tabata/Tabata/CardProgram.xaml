@@ -58,7 +58,7 @@
                 <TextBlock Text="{Binding PartiCrps}" />
             </Viewbox>
             <Viewbox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5">
-                <TextBlock x:Name="duree" Text="{Binding Favorite}" />
+                <TextBlock x:Name="duree" Text="{Binding Muscles}" />
             </Viewbox>
 
             <Image Source="{Binding StarImg1}" Grid.Row="1" Grid.Column="2"/>

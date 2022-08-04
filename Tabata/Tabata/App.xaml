@@ -48,5 +48,11 @@
         <Style TargetType="TextBox" x:Key="editBox">
             <Setter Property="Margin" Value="0,0,2,-6"></Setter>
         </Style>
+        <Style TargetType="TextBlock" x:Key="chronoTxt">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

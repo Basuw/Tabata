@@ -55,7 +55,7 @@ namespace Stub
         {
             List<ClassTest.Enum.Muscles> muscleListP1 = new List<ClassTest.Enum.Muscles>() { ClassTest.Enum.Muscles.Triceps, ClassTest.Enum.Muscles.Pectoraux };
 
-            Programs prog1 = new("P1", 1, false, "img/squat.jpg", 45, 15, list, ref usr, ClassTest.Enum.Types.Cardio, muscleListP1, ClassTest.Enum.PartieCorp.Haut_Du_Corps);
+            Programs prog1 = new("P1", 1, false, "img/squat.jpg", 4, 2, list, ref usr, ClassTest.Enum.Types.Cardio, muscleListP1, ClassTest.Enum.PartieCorp.Haut_Du_Corps);
             Programs prog2 = new("P2", 2, true, "img/squat.jpg", 45, 15, list, ref usr, ClassTest.Enum.Types.Force, muscleListP1, ClassTest.Enum.PartieCorp.Haut_Du_Corps);
             Programs prog3 = new("P3", 3, false, "img/squat.jpg", 45, 15, list, ref usr, ClassTest.Enum.Types.Cardio, muscleListP1, ClassTest.Enum.PartieCorp.Haut_Du_Corps);
             Programs prog4 = new("P4", 2, true, "img/squat.jpg", 23, 15, list, ref usr, ClassTest.Enum.Types.Endurance, muscleListP1, ClassTest.Enum.PartieCorp.Bas_du_corps);

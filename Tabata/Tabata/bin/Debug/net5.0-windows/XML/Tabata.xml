@@ -2,7 +2,7 @@
 <User xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ClassTest">
   <Firstname>Bastien</Firstname>
   <Lastname>Jacquelin</Lastname>
-  <BirthDate>2009-09-04T00:00:00</BirthDate>
+  <BirthDate>2003-04-09T00:00:00</BirthDate>
   <Weight>60</Weight>
   <Height>182</Height>
   <Sexe>Male</Sexe>
