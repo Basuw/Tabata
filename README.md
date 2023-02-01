@@ -19,3 +19,7 @@ The perfect application for beginners who want to get into the sport
 - Enjoy
 
 **Fully functional project**
+
+### Authors 
+
+Rémi Arnal & Bastien Jacquelin
