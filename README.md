@@ -15,5 +15,7 @@ The perfect application for beginners who want to get into the sport
 
 - clone this repository
 - open it with visual studio
+- Create a shortcut
+- Enjoy
 
 **Fully functional project**
